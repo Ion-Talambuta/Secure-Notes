@@ -7,4 +7,4 @@
 // --> Notes are encrypted based on the unique password entered by the user 
     and are saved in the database and decryption is done based on the same password.
 // --> Database Security - Password Secure Database Login SHA256 Password Private Key & SHA256 Password Public Key
-// --> Protecting user data - Connection to the Database via SLL with AES_25
+// --> Protecting user data - Connection to the Database via SLL with AES_256
