@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ApplicationController">
+
+    <AnchorPane layoutX="-5.0" layoutY="63.0" prefHeight="661.0" prefWidth="1285.0" style="-fx-background-color: fafafa;" AnchorPane.rightAnchor="-0.599999999999909">
+
+        <MenuBar layoutX="92.0" layoutY="2.0" prefHeight="26.0" prefWidth="744.0" style="-fx-background-color: #f9f9f9;" AnchorPane.bottomAnchor="636.0" AnchorPane.leftAnchor="265.0" AnchorPane.rightAnchor="90.0">
+
+            <Menu mnemonicParsing="false" text="File">
+                <MenuItem mnemonicParsing="false" text="New File" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+                <MenuItem mnemonicParsing="false" text="Delete" />
+            </Menu>
+            <Menu mnemonicParsing="false" text="Format">
+                <MenuItem mnemonicParsing="false" text="Format" />
+            </Menu>
+            <Menu mnemonicParsing="false" text="View">
+                <MenuItem mnemonicParsing="false" text="View" />
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+                <MenuItem mnemonicParsing="false" text="About" />
+            </Menu>
+
+            <effect>
+                <Blend opacity="0.4">
+                    <topInput>
+                        <DropShadow />
+                    </topInput>
+                </Blend>
+            </effect>
+
+        </MenuBar>
+
+        <Button fx:id="LogoutButton" layoutX="1201.0" layoutY="2.0" mnemonicParsing="false" onAction="#initialize" onMouseClicked="#logout" prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: #f9f9f9;" text="Log Out" textAlignment="CENTER">
+            <font>
+                <Font name="Leelawadee" size="12.0" />
+            </font>
+            <effect>
+                <Blend opacity="0.4">
+                    <topInput>
+                        <DropShadow />
+                    </topInput>
+                </Blend>
+            </effect>
+        </Button>
+      <Button fx:id="saveButton" layoutX="10.0" layoutY="2.0" mnemonicParsing="false" onAction="#initialize" onMouseClicked="#saveNotice" prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: #f9f9f9;" text="SAVE" textAlignment="CENTER">
+         <font>
+            <Font name="Leelawadee" size="12.0" />
+         </font>
+         <effect>
+            <Blend opacity="0.4">
+               <topInput>
+                  <DropShadow />
+               </topInput>
+            </Blend>
+         </effect>
+      </Button>
+      <Button fx:id="refreshButton" layoutX="95.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#refreshTable" prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: #f9f9f9;" text="REFRESH" textAlignment="CENTER">
+         <font>
+            <Font name="Leelawadee" size="12.0" />
+         </font>
+         <effect>
+            <Blend opacity="0.4">
+               <topInput>
+                  <DropShadow />
+               </topInput>
+            </Blend>
+         </effect>
+      </Button>
+      <Button fx:id="deleteButton" layoutX="180.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#deleteNotice" prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: #f9f9f9;" text="DELETE" textAlignment="CENTER">
+         <font>
+            <Font name="Leelawadee" size="12.0" />
+         </font>
+         <effect>
+            <Blend opacity="0.4">
+               <topInput>
+                  <DropShadow />
+               </topInput>
+            </Blend>
+         </effect>
+      </Button>
+      <TextArea fx:id="NoticeTextInput" layoutX="10.0" layoutY="359.0" prefHeight="300.0" prefWidth="1270.0" promptText="Click to insert your notes here.." AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="360.0">
+         <font>
+            <Font name="Calibri Light" size="14.0" />
+         </font>
+      </TextArea>
+        
+    </AnchorPane>
+    <Label layoutX="589.0" layoutY="17.0" text="Secure_IT" textAlignment="CENTER" textFill="WHITE">
+        <font>
+            <Font name="Leelawadee" size="24.0" />
+        </font>
+    </Label>
+
+    <ImageView fx:id="logo_img" fitHeight="45.0" fitWidth="45.0" layoutX="15.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../GraphicResources/neutron_logo.png" />
+    </ImageView>
+   <Label fx:id="labelReceived" text="Label" textFill="#2e3348" />
+
+   <TableView fx:id="dataUsersTable" layoutX="15.0" layoutY="110.0" onMouseClicked="#select" prefHeight="400.0" prefWidth="1265.0" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="93.0">
+      <columns>
+         <TableColumn fx:id="idNotice" maxWidth="60.0" prefWidth="60.0" text="idNotice" visible="false" />
+         <TableColumn fx:id="idusers_notes" maxWidth="60.0" prefWidth="60.0" text="idusers_notes" visible="false" />
+         <TableColumn fx:id="data" maxWidth="70.0" prefWidth="70.0" style="-fx-alignment: center;" text="DATA" />
+         <TableColumn fx:id="notes" maxWidth="-Infinity" minWidth="1200.0" prefWidth="1200.0" style="-fx-alignment: center;" text="NOTES" />
+      </columns>
+   </TableView>
+</AnchorPane>

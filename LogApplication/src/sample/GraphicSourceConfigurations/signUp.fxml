@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SignUpController">
+    <AnchorPane layoutX="5.0" layoutY="65.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="690.0" style="-fx-background-color: fafafa;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+      <AnchorPane layoutX="390.0" layoutY="100.0" prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #dedede; -fx-background-radius: 40; -fx-border-radius: 40; -fx-border-color: black;">
+         <children>
+              <Label layoutX="120.0" layoutY="55.0" text="Register" textAlignment="CENTER">
+                  <font>
+                      <Font name="Leelawadee" size="18.0" />
+                  </font>
+              </Label>
+              <TextField fx:id="SignUpSurname" alignment="TOP_LEFT" layoutX="20.0" layoutY="85.0" prefHeight="30.0" prefWidth="260.0" promptText="First Name" style="-fx-border-color: silver; -fx-border-radius: 5;">
+                  <font>
+                      <Font size="14.0" />
+                  </font>
+              </TextField>
+              <TextField fx:id="SignUpName" alignment="TOP_LEFT" layoutX="20.0" layoutY="130.0" prefHeight="30.0" prefWidth="260.0" promptText="Last Name" style="-fx-border-color: silver; -fx-border-radius: 5;">
+                  <font>
+                      <Font size="14.0" />
+                  </font>
+              </TextField>
+              <TextField fx:id="login_field" alignment="TOP_LEFT" layoutX="20.0" layoutY="175.0" prefHeight="30.0" prefWidth="260.0" promptText="Login" style="-fx-border-color: silver; -fx-border-radius: 5;">
+                  <font>
+                      <Font size="14.0" />
+                  </font>
+              </TextField>
+              <PasswordField fx:id="password_field" alignment="TOP_LEFT" layoutX="20.0" layoutY="220.0" prefHeight="30.0" prefWidth="260.0" promptText="Password">
+                  <font>
+                      <Font size="14.0" />
+                  </font>
+              </PasswordField>
+              <Label layoutX="22.0" layoutY="250.0" text="Use 9 or more characters( 0-9/ A-Z/ !@#&amp;()?/*~$^+=&lt;&gt; )" textAlignment="CENTER">
+                  <font>
+                      <Font size="10.0" />
+                  </font>
+              </Label>
+              <PasswordField fx:id="password_fieldMatched" alignment="TOP_LEFT" layoutX="20.0" layoutY="265.0" prefHeight="30.0" prefWidth="260.0" promptText="Confirm Password">
+                  <font>
+                      <Font size="14.0" />
+                  </font>
+              </PasswordField>
+              <TextField fx:id="SignUpLocation" alignment="TOP_LEFT" layoutX="20.0" layoutY="310.0" prefHeight="30.0" prefWidth="260.0" promptText="Location" style="-fx-border-color: silver; -fx-border-radius: 5;">
+                  <font>
+                      <Font size="14.0" />
+                  </font>
+              </TextField>
+              <Button fx:id="SignUpButton" layoutX="100.0" layoutY="355.0" mnemonicParsing="false" onMouseClicked="#SignUpNewUsers" prefHeight="20.0" prefWidth="100.0" style="-fx-background-color: fafafa; -fx-border-color: silver; -fx-border-radius: 5; -fx-background-radius: 5;" text="Sign Up" textAlignment="CENTER">
+                  <font>
+                      <Font name="Leelawadee" size="12.0" />
+                  </font>
+              </Button>
+            <ImageView fitHeight="65.0" fitWidth="90.0" layoutX="50.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../GraphicResources/userAdd.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+    </AnchorPane>
+    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="485.0" layoutY="17.0" text="Secure_IT" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+        <font>
+            <Font name="Leelawadee" size="26.0" />
+        </font>
+    </Label>
+    <ImageView fx:id="logo_img" fitHeight="45.0" fitWidth="45.0" layoutX="15.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../GraphicResources/neutron_logo.png" />
+    </ImageView>
+</AnchorPane>
